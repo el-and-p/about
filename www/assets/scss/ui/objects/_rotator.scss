@@ -1,0 +1,131 @@
+.rotator {
+	position: relative;
+}
+.rotator__controls {
+	display: none;
+	position: absolute;
+	z-index: 10;
+	top: lg_em(110px);
+	width: 100%;
+}
+.rotator__prev,
+.rotator__next {
+	position: absolute;
+	cursor: pointer;
+}
+.rotator__prev {
+	left: lg_em(10px);
+}
+.rotator__next {
+	right: lg_em(10px);
+}
+.rotator__item {
+	@include transition(opacity 0.5s linear 0.3s);
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+	.rotator &.is-first-item {
+		position: static;
+	}
+	.csstransitions.csstransforms & {
+		display: block;
+	}
+	.rotator & {
+		position: absolute;
+	}
+	&.is-selected {
+		display: block;
+	}
+	.figure {
+		width: lg_em(80px);
+		margin-bottom: lg_em(20px);
+	}
+	&.is-fading-out {
+		opacity: 0;
+		.rotator__body,
+		.layout--masonry__container {
+			@include transition(all 0.3s ceaser($easeInOutExpo));
+			@include transform(scale(0.8));
+		}
+	}
+	&.is-fading-in {
+		opacity: 1;
+		@include transition(opacity 0.3s ease-in 0.6);
+		.rotator__body,
+	    .layout--masonry__container {
+			@include transition(all 0.3s ease-in 0.9);
+			@include transform(scale(1));
+		}
+	}
+}
+.rotator__content.bottom-slide {
+	@extend %transition--all;
+}
+.rotator__body,
+.layout--masonry__container {
+	@include transform(scale(0.8));
+}
+.rotator__body {
+	max-width: lg_em(500px);
+	margin: auto;
+	text-align: left;
+	.is-selected & {
+		@include transform(scale(1));
+	}
+}
+
+.rotator__menu {
+	position: absolute;
+	top: lg_em(22px);
+	margin: auto;
+	width: 100%;
+	text-align: center;
+	z-index: 10;
+	.nav {
+		margin-bottom: 0;
+	}
+	.btn {
+		margin-left: lg_em(15px);
+		&.is-selected {
+			background-color: $rotator__menu-item--selected-background;
+		}
+	}
+}
+.rotator__menu .nav li:first-child .btn {
+	margin-left: 0;
+}
+
+@include breakpoint(600px, $no-query: true){
+	.rotator__menu {
+		top: lg_em(40px);
+	}
+}
+
+@include breakpoint(800px, $no-query: true){
+	.rotator__controls {
+		display: block;
+	}
+	.rotator__menu {
+		display: none;
+	}
+	.rotator__item {
+		padding-bottom: lg_em(200px);
+	}
+}
+
+@include breakpoint(1000px, $no-query: true){
+
+	.rotator__body {
+		margin-left: percentage(115/1232);
+	}
+}
+
+@include breakpoint(1200px, $no-query: true){
+
+	.rotator__controls {
+		top: lg_em(240px);
+	}
+
+}

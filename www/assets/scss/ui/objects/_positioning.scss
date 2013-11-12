@@ -1,0 +1,46 @@
+/*
+## Positioning Statement
+```
+<div class="positioning positioning--homepage">
+	<h1 class="positioning__title">Auckland Sea Shuttles<span class="positioning__subtitle">Any island,<br /> any time</span></h1>
+	<p class="positioning__lede">Auckland Sea Shuttles provides a professional water taxi service in the Hauraki Gulf, making Auckland and its neighbouring islands accessible for you to enjoy.</p>
+<p class="positioning__footnote">Coming Late October 2013</p>
+</div>
+```
+*/
+.positioning__title {
+	font-size: lg_em(37px);
+	color: $positioning__title-color;
+}
+.positioning__subtitle {
+	display: block;
+	color: $positioning__subtitle-color;
+}
+.positioning__lede {
+	font-size: lg_em(23px);
+}
+.positioning--homepage {
+	width: 100%;
+	max-width: lg_em(510px);
+	margin: auto;
+}
+.positioning__footnote {
+	@include lg_font-type( 'gamma' );
+	@extend %text--heading;
+}
+
+@include breakpoint(600px, $no-query: true){
+
+	.positioning__title {
+		@include lg_font-type('giga');
+	}
+	.positioning--homepage {
+		// Margin Bottom just while we have no homepage CTA
+		margin: 0 auto lg_em(150px);
+	}
+	.positioning__footnote {
+		@include lg_font-type( 'beta' );
+	}
+
+
+}

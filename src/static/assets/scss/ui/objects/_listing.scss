@@ -1,0 +1,53 @@
+.listing--contact {
+	@extend %border;
+	@extend %border--bottom;
+	@extend %border--light;
+	padding: lg_em(20px) 0 lg_em(50px);
+	margin-bottom: lg_em(50px);
+	> li {
+		margin-top: lg_em(30px);
+		text-align: center;
+	}
+	> li:first-child {
+		margin-top: 0;
+		.iconf__container {
+			margin-left: 0;
+		}
+	}
+
+}
+.listing--contact__header {
+	margin-top: lg_em(30px);
+	text-align: center;
+}
+.listing--contact__phone {
+	@include lg_font-type( 'gamma' );
+}
+.listing--contact__email {
+	@include lg_font-type( 'delta' );
+}
+
+@include breakpoint( '500px', $no-query: true ) {
+	.listing--contact__phone {
+		@include lg_font-type( 'mega' );
+	}
+	.listing--contact__email {
+		@include lg_font-type( 'gamma' );
+	}
+}
+
+@include breakpoint( '1024px', $no-query: true ) {
+
+	.listing--contact__header {
+		margin-top: 0;
+		text-align: left;
+	}
+
+	.listing--contact {
+		border-bottom: none;
+		> li {
+			text-align: left;
+		}
+	}
+}
+

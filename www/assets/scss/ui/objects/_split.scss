@@ -1,0 +1,45 @@
+/*
+## Split
+
+Simple split item for creating two elements floated away from one another. Presents options to the user.
+
+```
+<dl class="split">
+	<dt class="split__title">Auckland &mdash; Waiheke / Rakino</dt>
+	<dd>
+		Return: <strong>$75</strong> pp<br />
+		One way: <strong>$45</strong pp
+	</dd>
+	<dt class="split__title">Auckland &mdash; Home Bay / Motuihe / Islington Bay</dt>
+	<dd>
+		Return: <strong>$55</strong> pp<br />
+		One way: <strong>$35</strong pp
+	</dd>
+	<dt class="split__title">Auckland &mdash; Rangitoto / Stanley Point</dt>
+	<dd>
+		Return: <strong>$35</strong> pp<br />
+		One way: <strong>$20</strong pp
+	</dd>
+</dl>
+```
+*/
+.split {
+	border-bottom: 1px solid $border-color;
+	> dt,
+	> dd {
+		@include lg_font-type('delta');
+		position: relative;
+		padding: lg_em(20px, $h4-size) 0;
+		&:before {
+			@extend %pseudo-element;
+			top: 0;
+			left: 0;
+			height: 1px;
+			width: 100%;
+			background-color: $border-color;
+		}
+	}
+	> dt {
+		max-width: 60%;
+	}
+}

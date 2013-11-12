@@ -1,0 +1,253 @@
+///*------------------------------------*\
+//    $THEME
+//\*------------------------------------*/
+
+///**
+// * Colour Swatch
+// */
+
+//-- Auckland Sea Shuttles
+$white: #ffffff;
+$black: #000000;
+$yellow: #fdd41a;
+$grey: #757575;
+$grey--light: #909090;
+$grey--dark: #1b1c1b;
+$grey--dark-2: #393939;
+$pink: #fadadd;
+$blue: #00acee;
+$blue--electric: #25d0ee;
+$red: #cc0000;
+$green: green;
+$gold: #c3a57f;
+$twilight: #54729a;
+$pigeon: #345065;
+
+
+//--- Fonts
+$giga-size:         60px;
+$mega-size:         30px;
+$kilo-size:         26px;
+
+$h1-size:           80px; // .alpha
+$h1-size--small:    50px; // .alpha--small
+$h2-size:           32px; // .beta
+$h3-size:           24px; // .gamma
+$h4-size:           18px; // .delta
+$h5-size:           16px; // .
+$h6-size:           16px; // .zeta
+
+$milli-size:        14px;
+$micro-size:        12px;
+
+//Line Heights
+$giga-line-height:         60px;
+$mega-line-height:         30px;
+$kilo-line-height:         26px;
+
+$h1-line-height:           70px; // .alpha
+$h2-line-height:           32px; // .beta
+$h3-line-height:           24px; // .gamma
+$h4-line-height:           22px; // .delta
+$h5-line-height:           20px; // .epsilon
+$h6-line-height:           20px; // .zeta
+
+$milli-line-height:        16px;
+$micro-line-height:        16px;
+
+//Font Familys
+$font-family-sans: 'proxima-nova', Arial, Verdana, sans-serif;
+$font-family-brand:  'proxima-nova', Arial, Verdana, sans-serif;
+$font-family-serif: Georgia, Times New Roman, serif;
+$font-family-mono: Monaco, Menlo, Consolas, "Courier New", monospace;
+//Font styles
+$text--light-color: $white;
+$text--dark-color: $black;
+$text--error-color: $red;
+$text--highlight-color: $blue;
+$text--bright-color: $blue--electric;
+$base-ui-color:     $grey--light;
+$base-font-size:    16px;
+$base-line-height:  20px;
+$base-font-family: $font-family-sans;
+$headings-font-family: $font-family-brand;
+$headings-color: $white;
+$headings--dark-color: $black;
+$positioning-color: $white;
+$ornamental-font-family: $font-family-brand;
+$code-font-family: $font-family-mono;
+
+ //-- Brand stuff
+$brand-color: $yellow;
+$brand-face: $headings-font-family;
+///**
+// * How big would you like round corners to be by default?
+// */
+$brand-round: 0;
+
+//-- Back To Top
+$back-to-top-background: $black;
+$back-to-top__icon-color: $yellow;
+
+//Blockquote
+$blockquote-color: $white;
+$blockquote__cite-color: $grey;
+
+//--- Scaffolding
+$body-color: $white;
+$body--dark-color: $white;
+$body-background: $black;
+
+//--- Borders
+$border-color: $grey--light;
+$border--dark-color: $black;
+$border--light-color: $white;
+
+//--- Selection Text
+$selection-background: $yellow;
+$selection-color: $black;
+
+//Lede Colour
+$lede-color: $white;
+$lede--dark-color: $black;
+
+//--- Links
+$link-color: $yellow;
+$link--visited-color: $yellow;
+$link--hover-color: $white;
+$link--active-color: $yellow;
+
+//--- Buttons
+$button-background: $yellow;
+$button-color: $black;
+$button--hover-background: $white;
+$button--hover-color: $black;
+$button--positive-background: $green;
+$button--positive-color: $green;
+$button--negative-background: $red;
+$button--negative-color: $white;
+$button--inactive-background: $grey--dark;
+$button--inactive-color: $grey--light;
+$button--dark-background: $grey--dark-2;
+$button--dark-color: $white;
+$button--hover-dark-background: $white;
+$button--hover-dark-color: $black;
+
+//-- Footer
+$footer__link-color: $grey;
+$footer__link--hover-color: $white;
+$footer-border: $grey;
+$footer-background: $black;
+$footer__heading-color: $grey--light;
+
+//--- Forms
+$form__label-color: $black;
+$form__label--light-color: $white;
+$form__input-color: $grey--light;
+$form__input-background: $black;
+$form__input-border: $grey--light;
+$form__input--error-color: $red;
+$form__input--error-background: $pink;
+$form__input--error-border: $red;
+$form__input--focus-background: $white;
+$form__placeholder-color: $grey--light;
+$form__placeholder--error-color: $red;
+$form__msg-color: $white;
+$form--error-color: $red;
+$form--valid-color: $green;
+$form--footer__input-background: $grey--dark;
+$form--footer__input-color: $grey--light;
+$form--footer__placeholder-color: $grey--light;
+
+//-- Figure
+$figure__icon-color: $black;
+$figure__icon-background: $yellow;
+$figure__figcaption-color: $white;
+
+//-- Header
+$header__link-color: $white;
+$header__link--hover-color: $yellow;
+$header__link--selected-color: $yellow;
+$header-background: $black;
+$header-border: $grey--light;
+$header__icon-color: $grey--light;
+$header__icon--hover-color: $white;
+$header__cta-call-background: $grey--light;
+$header__cta-call-color: $black;
+
+
+//-- Main
+$main-background: $pigeon;
+
+//--- Homepage
+$homepage__positioning-text: $yellow;
+$homepage__positioning-subtitle: $white;
+
+//--- Icons
+$iconf-size: 35px;
+$iconf-size--small: 19px;
+$iconf-size--large: 60px;
+$iconf__container-background: $yellow;
+$iconf-color: $black;
+$iconf-background: $yellow;
+$iconf--hover-color: $black;
+$iconf--hover-background: $yellow;
+$iconf--bright-color: $white;
+$iconf--bright-background: $black;
+$iconf--light-color: $blue;
+$iconf--light-background: $blue;
+$iconf--hover-light-color: $white;
+$iconf--hover-light-background: $blue;
+$iconf--dark-color: $grey--light;
+$iconf--brand-color: $yellow;
+$iconf--dark-background: $grey;
+$iconf--hover-dark-color: $grey--light;
+$iconf--hover-dark-background: $grey;
+
+//-- Modal
+$modal-background: $white;
+$modal-color: $black;
+$modal--dark-background: $black;
+$modal--dark-color: $white;
+
+//-- Pod
+$pod-background: $black;
+$pod-color: $white;
+
+//-- Positioning Statement
+$positioning__title-color: $brand-color;
+$positioning__subtitle-color: $white;
+
+//Rotator
+$rotator__menu-item--selected-background: $white;
+
+// Splash Pages
+$overlay--dark-background: $black;
+$splash--sunset-background: $twilight;
+
+//Tab
+$tab__btn-background: $yellow;
+$tab__btn-color: $black;
+$tab__btn--selected-background: $black;
+$tab__btn--selected-color: $white;
+$tab__btn--hover-background: $white;
+$tab__btn--hover-color: $black;
+
+//Table
+$table-border: $white;
+
+//-- Tooltip
+$tooltip-color: $black;
+$tooltip-background: $white;
+$tooltip__icon-color: $black;
+$tooltip__button-color: $blue;
+$tooltip__meta-color: $grey--light;
+$tooltip__text--light: $blue;
+
+//-- Warning
+$warning-color: $white;
+$warning__link-color: $gold;
+
+//-- Weather
+$weather__meta-color: $grey--light;
+$weather__meta--important-color: $blue;

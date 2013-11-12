@@ -1,0 +1,2 @@
+define(["jquery","easing","pubsub"],function(e){return{init:function(){this._initSubscriptions()},_initSubscriptions:function(){e.subscribe("/scroller/move",this._moveToElement)},_moveToElement:function(t){var n=e(t.element);e("html,body").animate({scrollTop:n.offset().top-80},500,"easeInOutExpo")}}});
+//# sourceMappingURL=scroller.js.map

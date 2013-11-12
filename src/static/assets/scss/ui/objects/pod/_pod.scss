@@ -1,0 +1,49 @@
+/*
+
+## Pod
+
+```
+<div style="background-color: white; padding: 10px;">
+<div class="pod">.pod </div>
+</div>
+```
+
+*/
+
+.pod {
+	padding: lg_em(30px);
+	background-color: $pod-background;
+	color: $pod-color;
+	.nav & {
+		margin-bottom: lg_em(30px);
+	}
+	> blockquote {
+		display: block;
+		margin-bottom: 0;
+	}
+}
+
+.pod--opaque {
+	@include rgba-background-inline(rgba($pod-background,0.75));
+}
+
+/*
+
+Pod Testimonial
+
+```
+<div style="background-color: white; padding: 10px;">
+<div class="pod">
+	<span class="figure figure--round"><img src="/assets/images/placeholder/testimonial.jpg" alt="" /></span>
+	<blockquote>
+		<p>Ipsum dolor sed ipsam libero ullam impedit reiciendis reprehenderit rerum maxime nulla impedit ratione dolore consectetur impedit blanditiis aliquam excepturi repudiandae. Harum quos recusandae aspernatur excepturi vitae? Aliquam rem odio.</p>
+		<cite>Name, Ireland</cite>
+	</blockquote>
+</div>
+</div>
+```
+
+*/
+.pod--quote {
+
+}

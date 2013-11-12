@@ -1,0 +1,67 @@
+.grid--full {
+
+	.grid__item--two,
+	.grid__item--three,
+	.grid__item--four {
+		width: 100%;
+	}
+
+	> .grid__item--two,
+	  .grid__item--three {
+		@extend %border;
+		@extend %border--bottom;
+		padding-bottom: lg_em(20px);
+		margin-bottom: lg_em(40px);
+	}
+}
+
+.grid--wide {
+	margin-left: lg_em(-80px);
+	> .grid__item {
+		padding-left: lg_em(80px);
+	}
+}
+
+@include breakpoint(800px, $no-query: true){
+	.grid--full {
+		.grid__item--one {
+			width: 100%;
+		}
+		> .grid__item--two,
+		> .grid__item--three {
+			width: 50%;
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+		> .grid__item--two {
+			padding-right: lg_em(40px);
+			border-right: 1px dashed $border-color;
+		}
+		> .grid__item--three {
+			padding-left: lg_em(40px);
+		}
+	}
+}
+
+
+@include breakpoint(1000px, $no-query: true){
+	.grid--full {
+		> .grid__item--one,
+		> .grid__item--two {
+			margin-bottom: 0;
+		}
+
+		> .grid__item--one {
+			width: 66.66666%;
+		}
+
+		> .grid__item--three {
+			padding-right: lg_em(40px);
+		}
+		> .grid__item--four {
+			width: 33.33333%;
+			padding-left: lg_em(40px);
+			border-left: 1px dashed $border-color;
+		}
+	}
+}

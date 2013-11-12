@@ -1,0 +1,125 @@
+/*
+## Tables
+
+Default Table Style
+
+```
+<div style="background-color: black;">
+<table>
+	<thead>
+		<tr>
+			<th>header</th>
+			<th>header</th>
+			<th>header</th>
+			<th>header</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>body</td>
+			<td>body</td>
+			<td>body</td>
+			<td>body</td>
+		</tr>
+		<tr>
+			<td>body</td>
+			<td>body</td>
+			<td>body</td>
+			<td>body</td>
+		</tr>
+		<tr>
+			<td>body</td>
+			<td>body</td>
+			<td>body</td>
+			<td>body</td>
+		</tr>
+		<tr>
+			<td>body</td>
+			<td>body</td>
+			<td>body</td>
+			<td>body</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+```
+*/
+table {
+	@extend .table--bordered;
+}
+table {
+	th,
+	td {
+	}
+}
+
+/* 
+
+Timetable
+
+```
+<table class="table--timetable">
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>Morning Run</th>
+			<th>Afternoon Run</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Auckland</td>
+			<td>8am</td>
+			<td>5pm</td>
+		</tr>
+		<tr>
+			<td>Stanley Point</td>
+			<td>8.10am</td>
+			<td>5.10pm</td>
+		</tr>
+		<tr>
+			<td>Rangitoto</td>
+			<td>8.20am</td>
+			<td>5.20pm</td>
+		</tr>
+		<tr>
+			<td>Islington Bay</td>
+			<td>8.35am</td>
+			<td>5.35pm</td>
+		</tr>
+		<tr>
+			<td>Motuihe Island</td>
+			<td>9am</td>
+			<td>6pm</td>
+		</tr>
+		<tr>
+			<td>Waiheke</td>
+			<td>9.20am</td>
+			<td>6.20pm</td>
+		</tr>
+		<tr>
+			<td>Home Bay</td>
+			<td>9.40am</td>
+			<td>6.40pm</td>
+		</tr>
+		<tr>
+			<td>Rakino</td>
+			<td>10am <span>(arrives)</span></td>
+			<td>7pm</td>
+		</tr>
+	</tbody>
+</table>
+```
+*/
+
+.table--timetable {
+	th {
+		@extend %text--lightweight;
+	}
+	td {
+		@extend %text--heavy;
+		&:first-child {
+			@extend %text--lightweight;
+		}
+	}
+}

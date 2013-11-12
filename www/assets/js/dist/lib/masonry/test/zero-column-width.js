@@ -1,0 +1,2 @@
+!function(){test("zero column width",function(){var t=document.querySelector("#zero-column-width"),e=new Masonry(t);equal(e.columnWidth,180,"columnWidth = container innerWidth")})}();
+//# sourceMappingURL=zero-column-width.js.map

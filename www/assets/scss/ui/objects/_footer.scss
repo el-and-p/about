@@ -1,0 +1,213 @@
+/*
+
+## Footer
+
+```
+<div class="footer">
+	<div class="wrapper">
+		<form class="footer__form">
+			<h4 class="footer__form-heading">Newsletter Sign Up</h4>
+			<fieldset>
+				<legend class="visuallyhidden">Sign up for the Auckland Sea Shuttles newsletter</legend>
+				<ol class="form-fields">
+					<li>
+						<label for="subscribe-name" class="visuallyhidden">Your Name</label>
+						<input type="text" class="text-input text-input--small" id="subscribe-name" placeholder="Your Name"/>
+					</li>
+					<li>
+						<label for="subscribe-email" id="subscribe-email" class="visuallyhidden">Your Email</label>
+						<input type="email" class="text-input text-input--small" placeholder="Your Email" />
+					</li>
+					<button class="btn" type="submit">Submit</button>
+				</ol>
+			</fieldset>
+		</form>
+		<ul class="nav footer__legal-links">
+			<li><a href="/sitemap">Sitemap</a></li>
+			<li><a href="/contact-us">Contact Us</a></li>
+			<li><a href="/privacy-policy">Privay Policy</a></li>
+			<li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+			<li><a href="/el-and-p" target="_blank">Website by EL&amp;P</a></li>
+			<li class="footer__copyright"><span>Copyright 2013 Auckland Sea Shuttles</span></li>
+		</ul>
+		<a href="#" class="footer__back-to-top">
+			<span class="visuallyhidden">Back to the top of the page</span>
+			<span class="iconf__container iconf__container--large iconf__container--dark">
+				<span aria-hidden="true" class="iconf-arrow-up iconf--dark"></span>
+			</span>
+		</a>
+	</div>
+</div>
+```
+*/
+.footer {
+	@include pie-clearfix;
+	position: relative;
+	padding: lg_em(20px) 0;
+	background: $footer-background;
+}
+.footer__legal-links {
+	margin: lg_em(20px) 0 0;
+	padding-top: lg_em(20px);
+	border-top: 1px dashed $footer-border;
+	> li {
+		width: 45%;
+		padding-top: 5px;
+		vertical-align: top;
+	}
+	> .footer__copyright {
+		width: 100%;
+	}
+	a,
+	span {
+		@extend %text--heading;
+		@include lg_font-type('milli');
+		color: $footer__link-color;
+	}
+	a:hover {
+		color: $footer__link--hover-color;
+		text-decoration: none;
+	}
+}
+.footer__copyright {
+	span {
+		@include lg_font-type('micro');
+		@extend %text--lightweight;
+	}
+}
+.footer__form {
+	padding-top: lg_em(15px);
+	border-top: 1px dashed $footer-border;
+}
+.footer__form,
+.footer__cta {
+	position: relative;
+	z-index: 1;
+}
+.footer__form-heading {
+	color: $footer__heading-color;
+}
+
+.footer__back-to-top-container {
+	position: absolute;
+	z-index: 0;
+	top: lg_em(-60px);
+	left: 0;
+	width: 100%;
+	height: lg_em(75px);
+}
+.footer__back-to-top {
+	display: block;
+	width: lg_em(75px);
+	margin: auto;
+	.iconf-arrow-up {
+		padding-bottom: lg_em(25px, 35px);
+	}
+}
+
+.footer__cta {
+	> li {
+		margin-top: lg_em(15px);
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+@include breakpoint(560px, $no-query: true) {
+
+	.footer__legal-links {
+		> li {
+			width: 30%;
+		}
+	}
+
+	.footer__form {
+		.form-fields > li {
+			float: left;
+			width: 48%;
+			margin-left: 4%;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.footer__cta {
+		//display: none;
+	}
+}
+
+
+@include breakpoint(600px, $no-query: true){
+	.footer__form {
+		padding-top: 0;
+		border-top: none;
+	}
+}
+
+@include breakpoint(660px, $no-query: true){
+
+	.footer__form {
+		.form-fields > li {
+			margin-left: 2%;
+			width: 40%;
+		}
+		.btn {
+			width: 15%;
+			margin-left: 2%;
+		}
+	}
+
+}
+
+@include breakpoint(960px, $no-query: true) {
+
+	.footer__legal-links {
+		padding: 0;
+		margin: 0;
+		width: 50%;
+		float: right;
+		border: none;
+	}
+
+	.footer__form {
+		width: 45%;
+		float: right;
+		margin-left: 5%;
+		.form-fields {
+			> li {
+				width: 48%;
+				margin-left: 4%;
+			}
+		}
+		.btn {
+			margin-left: 0;
+			width: auto;
+		}
+	}
+}
+
+@include breakpoint($extra-large-start, $no-query: true) {
+
+	.footer__form {
+		fieldset,
+		.footer__form-heading {
+			float: left;
+		}
+		.footer__form-heading {
+			width: 25%;
+		}
+		fieldset {
+			width: 75%;
+			padding-left: 3%;
+		}
+		.form-fields > li {
+			width: 34%;
+		}
+		.btn {
+			margin-left: 3%;
+		}
+	}
+
+}

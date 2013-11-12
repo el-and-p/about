@@ -1,0 +1,285 @@
+/*
+
+## Font Icons
+
+Font icons are generated using the following markup `<span aria-hidden="true" class="iconf-classname"></span>`.
+
+```
+<div style="background-color: white;">
+<span aria-hidden="true" class="iconf-github"></span>
+<span aria-hidden="true" class="iconf-twitter"></span>
+<span aria-hidden="true" class="iconf-facebook"></span>
+<span aria-hidden="true" class="iconf-linkedin"></span>
+<span aria-hidden="true" class="iconf-dribbble"></span>
+<span aria-hidden="true" class="iconf-house"></span>
+</div>
+```
+*/
+.iconf-github:before {
+	content: "\e600";
+}
+.iconf-twitter:before {
+	content: "\e601";
+}
+.iconf-facebook:before {
+	content: "\e602";
+}
+.iconf-linkedin:before {
+	content: "\e603";
+}
+.iconf-dribbble:before {
+	content: "\e604";
+}
+.iconf-house:before {
+	content: "\e605";
+}
+
+/*
+#### Font Icon Helper
+
+Large Icons. Add a `.iconf--large` class.
+
+```
+<div style="background-color: white;">
+<span aria-hidden="true" class="iconf-pin-alt iconf--large"></span>
+</div>
+```
+
+Icon Containers - regular and large
+
+```
+<span class="iconf__container iconf__container--small">
+	<span aria-hidden="true" class="iconf-pin-alt iconf--small"></span>
+</span>
+<span class="iconf__container">
+	<span aria-hidden="true" class="iconf-pin-alt"></span>
+</span>
+<span class="iconf__container iconf__container--large">
+	<span aria-hidden="true" class="iconf-pin-alt iconf--large"></span>
+</span>
+<div style="background-color: white;">
+<span class="iconf__container iconf__container--large iconf__container--dark">
+	<span aria-hidden="true" class="iconf-pin-alt iconf--large iconf--dark"></span>
+</span>
+</div>
+<span class="iconf__container iconf__container--large iconf__container--light">
+	<span aria-hidden="true" class="iconf-twitter iconf--large iconf--bright"></span>
+</span>
+```
+
+Icon Container Hovers
+
+```
+<span class="iconf__container iconf__container--hot">
+	<span aria-hidden="true" class="iconf-pin-alt"></span>
+</span>
+<span class="iconf__container iconf__container--light iconf__container--hot">
+	<span aria-hidden="true" class="iconf-pin-alt"></span>
+</span>
+<span class="iconf__container iconf__container--bright iconf__container--hot">
+	<span aria-hidden="true" class="iconf-pin-alt"></span>
+</span>
+<div style="background-color: white;">
+<span class="iconf__container iconf__container--dark iconf__container--hot">
+	<span aria-hidden="true" class="iconf-pin-alt iconf--dark"></span>
+</span>
+</div>
+```
+
+Icon themes - default (black), bright (white), light (blue) dark (grey) and brand (yellow)
+
+```
+<span style="background-color: white; display: inline-block;">
+	<span aria-hidden="true" class="iconf-twitter"></span>
+</span>
+<span aria-hidden="true" class="iconf-twitter iconf--bright"></span>
+<span aria-hidden="true" class="iconf-twitter iconf--light"></span>
+<span aria-hidden="true" class="iconf-twitter iconf--dark"></span>
+<span aria-hidden="true" class="iconf-twitter iconf--brand"></span>
+```
+
+*/
+.iconf--small {
+	font-size: lg_em($iconf-size--small);
+}
+.iconf--large {
+	font-size: lg_em($iconf-size--large);
+	&.iconf-twitter,
+	&.iconf-facebook,
+	&.iconf-youtube   {
+		font-size: lg_em(75px);
+	}
+}
+
+.iconf__container {
+	@include lg_circle(lg_em($iconf-size + 15px));
+	background-color: $iconf__container-background;
+	&,
+	.nav > li > & {
+		display: table;
+	}
+	> [class*="iconf-"] {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+}
+.iconf__container--small {
+	@include lg_circle(lg_em(35px));
+}
+.iconf__container--large {
+	@include lg_circle(lg_em($iconf-size--large + 15px));
+}
+.iconf__container--dark {
+	background: $iconf--bright-background;
+}
+.iconf__container--light {
+	background: $iconf--light-background;
+}
+.iconf__container--bright {
+	background: $iconf--bright-color;
+}
+.iconf__container--hot {
+	@include transition(transform 0.1s ease-out 0.1s);
+	position: relative;
+	z-index: 0;
+	cursor: pointer;
+	&:before,
+	&:after {
+		@include border-radius(50%);
+		@include transform(scale(0.9));
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		content: '';
+		opacity: 0.5;
+		border: 1px solid $iconf__container-background;
+		// @include background-image(radial-gradient(center, ellipse cover,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(253,212,26,1) 100%));
+	}
+	&:hover {
+		@include transform(scale(0.93));
+		color: #fff;
+		&:before {
+			@include animation(sonarEffectInner 1.3s ease-out 75ms);
+		}
+		&:after {
+			@include animation(sonarEffectOuter 1.3s ease-out 75ms);
+		}
+	}
+	&.iconf__container--dark {
+		&:before,
+		&:after {
+			border-color: $iconf--bright-background;
+		}
+	}
+	&.iconf__container--light {
+		&:before,
+		&:after {
+			border-color: $iconf--light-background;
+		}
+	}
+	&.iconf__container--bright {
+		&:before,
+		&:after {
+			border-color: $iconf--bright-color;
+		}
+	}
+}
+.iconf--bright {
+	color: $iconf--bright-color;
+}
+
+.iconf--light {
+	color: $iconf--light-color;
+}
+
+.iconf--dark {
+	color: $iconf--dark-color;
+}
+.iconf--brand {
+	color: $iconf--brand-color;
+}
+.iconf--opaque {
+	color: transparent;
+}
+
+//Hover Animations
+@keyframes sonarEffectInner {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}
+@-moz-keyframes sonarEffectInner {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+	}
+	100% {
+		-moz-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+@-webkit-keyframes sonarEffectInner {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+	}
+	100% {
+		-webkit-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+@keyframes sonarEffectOuter {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+@-moz-keyframes sonarEffectOuter {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+	}
+	100% {
+		-moz-transform: scale(2);
+		opacity: 0;
+	}
+}
+@-webkit-keyframes sonarEffectOuter {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+	}
+	100% {
+		-webkit-transform: scale(2);
+		opacity: 0;
+	}
+}

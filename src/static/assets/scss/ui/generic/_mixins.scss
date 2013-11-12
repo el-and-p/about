@@ -1,0 +1,17 @@
+//SITE-SPECIFIC MIXINS
+//-- SVG Sprite Generator
+@mixin svg-sprite($logo-width, $logo-height, $sprite-height: 645, $sprite-width: 337, $sprite-position-top: 0, $sprite-position-left: 0) {
+	position: relative;
+	padding-bottom: percentage($logo-height/$logo-width);
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-size: percentage($sprite-width/$logo-width);
+		background-position: percentage($sprite-position-left /($sprite-width - $logo-width)) percentage($sprite-position-top/($sprite-height - $logo-height));
+		content: '';
+	}
+}

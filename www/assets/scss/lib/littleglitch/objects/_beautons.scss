@@ -1,0 +1,23 @@
+@if $use-glitch-beautons == true{
+
+///*------------------------------------*\
+//	$BEAUTONS.CSS
+//\*------------------------------------*/
+//
+///*------------------------------------*\
+//	$STYLES
+//\*------------------------------------*/
+///**
+// * Button style modifiers.
+// *
+// */
+.btn {
+	text-align: center;
+}
+.btn--round{
+	@include lg_circle( 3em );
+	padding: 0;
+	text-align: center;
+}
+
+}//endif

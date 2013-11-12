@@ -1,0 +1,19 @@
+.twitter {
+	width: lg_em(215px);
+	right: lg_em(47px);
+	top: 135%;
+	z-index: 4;
+	&.is-visible {
+		height: lg_em(220px);
+		padding-top: lg_em(20px);
+		padding-bottom: lg_em(20px);
+	}
+	&.is-closing {
+		padding-top: lg_em(20px);
+		padding-bottom: lg_em(20px);
+	}
+	> .modal__body {
+		overflow: hidden;
+		opacity: 0;
+	}
+}

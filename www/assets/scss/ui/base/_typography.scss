@@ -1,0 +1,303 @@
+/*
+## Font sizes
+
+Site-wide typography styles and helpers
+
+```
+<!-- Note: `.flush--bottom` class just used for illustrative purposes -->
+<p class="flush--bottom giga">.giga 60px</p>
+<p class="flush--bottom mega">.mega 30px</p>
+<p class="flush--bottom kilo">.kilo 26px</p>
+<p class="flush--bottom alpha">.alpha 120px</p>
+<p class="flush--bottom beta">.beta 32px</p>
+<p class="flush--bottom gamma">.gamma 24px</p>
+<p class="flush--bottom delta">.delta 18px</p>
+<p class="flush--bottom epsilon">.epsilon 16px</p>
+<p class="flush--bottom zeta">.zeta 16px</p>
+<p class="flush--bottom milli">.milli 14px</p>
+<p class="flush--bottom micro">.micro 12px</p>
+```
+
+*/
+
+html {
+	font-family: $base-font-family;
+}
+
+.wf-loading {
+	.positioning--homepage,
+	.heading,
+	#{headers()},
+    .header__link,
+	.btn {
+		visibility: hidden;
+	}
+}
+/*
+## Font Weights
+
+Light - 300. Default weight.
+```
+<p>Ipsum tenetur magnam vero commodi natus placeat debitis illum aliquid.</p>
+```
+
+Light Italic - 300
+```
+<p><em>Ipsum tenetur magnam vero commodi natus placeat debitis illum aliquid.</em></p>
+```
+
+Semibold - 600. Body copy bold/strong weight
+```
+<p><strong>Ipsum tenetur magnam vero commodi natus placeat debitis illum aliquid.</strong></p>
+```
+
+Semibold Italic - 600
+```
+<p><strong><em>Ipsum tenetur magnam vero commodi natus placeat debitis illum aliquid.</em></strong></p>
+```
+
+Extrabold - 700
+Headings and buttons
+```
+<h3 class="text--bare text--normal">Ipsum tenetur magnam vero commodi natus placeat debitis illum aliquid.</h3>
+```
+
+Extrabold Italic - 700
+```
+<h3 class="text--bare"><em>Ipsum tenetur magnam vero commodi natus placeat debitis illum aliquid.</em></p>
+```
+
+## Font Helper classes
+Each helper class has an equivalent Sass placeholder selector e.g. **.text--heading** can be called using **@extend %text--heading**.
+
+```
+<p class="text--heading">.text--heading - heading font style</p>
+<p class="text--bare">.text-bare - text-transform: none</p>
+<p class="text--impact">.text-impact - text-transform: uppercase</p>
+<p class="text--normal">.text-normal - font-style: normal</p>
+<p class="text--lightweight">.text--lightweight - regular font weight</p>
+<p class="text--strong">.text--strong - semibold font weight</p>
+<p class="text--heavy">.text--heavy - extrabold font weight</p>
+<p class="text--light">.text--light - light/default color font</p>
+<p class="text--brand">.text--brand - brand/link color font</p>
+<p class="text--bright">.text--bright - alternative link color font</p>
+<p class="text--highlight">.text--highlight - alternative link color font</p>
+<div style="background-color: white;">
+<p class="text--dark">.text--dark - dark color font</p>
+</div>
+<a href="" class="text--cta">More Info &amp; Booking</a> - .text--cta - Call To Action font
+<a href="" class="text--cta text-arrow">More Info &amp; Booking</a> - .text-arrow - Arrow after font
+<a href="" class="text--cta text-arrow--down">More Info &amp; Booking</a> - .text-arrow--down - Arrow Down after font
+<p class="subtitle">.subtitle</p>
+```
+*/
+#{headers()},
+.text--heading {
+	font-family: $headings-font-family;
+	color: $headings-color;
+	font-weight: 700;
+	font-style: italic;
+	text-transform: uppercase;
+}
+.text--impact {
+	text-transform: uppercase;
+}
+.text--bare {
+	text-transform: none;
+}
+.text--normal {
+	font-style: normal;
+}
+.text--lightweight {
+	font-weight: 300;
+}
+.text--strong {
+	font-weight: 600;
+}
+.text--heavy {
+	font-weight: 700;
+}
+.text--ornamental {
+	font-style: italic;
+}
+.text--brand {
+	color: $brand-color;
+}
+.text--light {
+	&,
+	&:visited {
+		color: $text--light-color;
+	}
+}
+.text--dark {
+	&,
+	&:visited {
+		color: $text--dark-color;
+	}
+}
+.text--bright {
+	&,
+	&:visited {
+		color: $text--bright-color;
+	}
+}
+.text--error {
+	color: $text--error-color;
+}
+.text--highlight {
+	color: $text--highlight-color;
+}
+.text--cta {
+	@extend %text--heavy;
+	font-family: $headings-font-family;
+	text-transform: uppercase;
+	font-style: italic;
+}
+[class*='text-arrow']:after {
+	display: inline-block;
+	margin-left: lg_em(5px);
+	font-style: normal;
+}
+.text-arrow:after {
+	content: '\1433';
+}
+.text-arrow--down:after {
+	content: '\25bc';
+}
+.subtitle {
+	@include lg_font-type('gamma');
+	font-style: italic;
+	margin-bottom: lg_em(40px, $h3-size);
+}
+/*
+## Heading styles
+
+Default Headings - uppercase, italic and bold
+
+```
+<h1>h1 heading</h1>
+<h2>h2 heading</h2>
+<h3>h3 heading</h3>
+<h4>h4 heading</h4>
+<h5>h5 heading</h5>
+<h6>h6 heading</h6>
+
+```
+
+Section Headings
+
+```
+<h1 class="text--bare">h1 heading</h1>
+<h2 class="text--bare">h2 heading</h2>
+<h3 class="text--bare">h3 heading</h3>
+<h4 class="text--bare">h4 heading</h4>
+<h5 class="text--bare">h5 heading</h5>
+<h6 class="text--bare">h6 heading</h6>
+```
+*/
+h1,
+.alpha {
+	font-size: lg_em($h1-size);
+}
+h1 {
+	margin-bottom: lg_em(20px, $h1-size);
+}
+h2 {
+	margin-bottom: lg_em(12px, $h2-size);
+}
+h3 {
+	margin-bottom: lg_em(12px, $h3-size);
+}
+h4 {
+	margin-bottom: lg_em(12px, $h4-size);
+}
+h5 {
+	margin-bottom: lg_em(12px, $h5-size);
+}
+h6 {
+	margin-bottom: lg_em(12px, $h6-size);
+}
+
+/*
+## Lede
+Page introductions
+```
+<p class="lede">.lede default - Sit aperiam nam reprehenderit necessitatibus molestiae ipsum quia? Molestias consectetur recusandae pariatur sit voluptatem autem possimus porro officia molestias</p>
+<div style="background-color: white">
+<p class="lede text--dark">.lede.lede--dark dark lede - Sit aperiam nam reprehenderit necessitatibus molestiae ipsum quia? Molestias consectetur recusandae pariatur sit voluptatem autem possimus porro officia molestias</p>
+</div>
+<div class="lede-section one-whole m-two-thirds l-one-half">
+	<h1>Lede section</h1>
+	<p class="lede text--dark">Where you want, when you want. Auckland Sea Shuttles' water taxis run to a regular schedule, or you can book a time that suits you!</p>
+</div>
+```
+ */
+.lede {
+	@include lg_font-type('gamma', false);
+	line-height: 1.3;
+}
+.lede-section {
+	margin-bottom: lg_em(40px);
+	> .lede {
+		margin-bottom: 0;
+	}
+}
+
+body {
+	font-weight: 300;
+}
+//Strong
+b,
+strong {
+	font-weight: 600;
+}
+//Paragraph
+p {
+	margin-bottom: tb_em(16px, $h6-size);
+}
+
+//Links
+a {
+	@extend %transition--color;
+	text-decoration: none;
+	word-wrap: break-word;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+//Blockquote
+blockquote {
+	quotes: "" "";
+	text-indent: 0;
+	> p {
+		@include lg_font-type('gamma');
+		line-height: 1.3;
+	}
+	cite {
+		@include lg_font-type('milli');
+		display: block;
+		margin-top: lg_em(10px, $h3-size);
+		color: $blockquote__cite-color;
+		font-style: italic;
+	}
+}
+//Horizontal Rule
+hr {
+}
+
+@include breakpoint($medium-start, $no-query: true){
+
+	h1,
+	.alpha {
+		@include lg_font-type('alpha');
+	}
+}
+
+@include breakpoint(600px, $no-query: true){
+
+	.lede-section {
+		margin-bottom: lg_em(80px);
+	}
+
+}

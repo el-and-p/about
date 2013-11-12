@@ -1,0 +1,43 @@
+@font-face {
+	font-family: 'font-icons';
+	src:url('font-icons.eot');
+	src:url('font-icons.eot?#iefix') format('embedded-opentype'),
+		url('font-icons.ttf') format('truetype'),
+		url('font-icons.woff') format('woff'),
+		url('font-icons.svg#font-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="iconf-"], [class*=" iconf-"] {
+	font-family: 'font-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.iconf-github:before {
+	content: "\e600";
+}
+.iconf-twitter:before {
+	content: "\e601";
+}
+.iconf-facebook:before {
+	content: "\e602";
+}
+.iconf-linkedin:before {
+	content: "\e603";
+}
+.iconf-dribbble:before {
+	content: "\e604";
+}
+.iconf-house:before {
+	content: "\e605";
+}

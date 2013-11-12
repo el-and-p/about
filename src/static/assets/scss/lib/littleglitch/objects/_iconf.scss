@@ -1,0 +1,39 @@
+@if $use-glitch-icon-font == true{
+
+//ICON EXAMPLE
+//<span class="iconf-facebook" aria-hidden="true"></span>
+
+@font-face {
+	font-family: 'font-icons';
+	src:url('/assets/fonts/font-icons/font-icons.eot');
+	src:url('/assets/fonts/font-icons/font-icons.eot?#iefix') format('embedded-opentype'),
+		url('/assets/fonts/font-icons/font-icons.woff') format('woff'),
+		url('/assets/fonts/font-icons/font-icons.ttf') format('truetype'),
+		url('/assets/fonts/font-icons/font-icons.svg#font-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+///* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-iconf]:before,
+[class*="iconf-"] {
+	//Set in /modules/_iconf.scss
+	font-family: 'font-icons';
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	color: $iconf-color;
+	font-size: lg_em($iconf-size);
+}
+[data-iconf]:before {
+	content: attr(data-icon);
+}
+//==================== ICONS
+//Set in /modules/_iconf.scss
+//.iconf-sample:before {
+//	content: "\e000";
+//}
+}

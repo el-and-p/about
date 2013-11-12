@@ -1,0 +1,21 @@
+.homepage {
+	padding: lg_em(40px) 0 lg_em(60px);
+}
+.homepage__cta {
+	padding: lg_em(40px) 0 0;
+	text-align: center;
+	> .iconf__container {
+		margin: 0 auto lg_em(10px);
+	}
+	> .text--cta {
+		margin-bottom: 0;
+	}
+}
+
+@include breakpoint( 600px, $no-query: true ){
+
+	.homepage {
+		padding: percentage(170/1900);
+	}
+
+}

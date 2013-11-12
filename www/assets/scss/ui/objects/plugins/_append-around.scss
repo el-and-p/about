@@ -1,0 +1,20 @@
+//Append Around JS Plugin hide/show styles
+.js-btn--small {
+	display: block !important;
+}
+
+.js-btn--large {
+	display: none !important;
+}
+
+@include breakpoint(600px, $no-query: true) {
+
+	.js-btn--small {
+		display: none !important;
+	}
+
+	.js-btn--large {
+		display: block !important;
+	}
+
+}

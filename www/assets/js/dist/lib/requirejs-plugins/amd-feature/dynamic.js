@@ -1,0 +1,2 @@
+define({JSON:[{isAvailable:function(){return"undefined"!=typeof JSON},module:function(){return JSON}},{isAvailable:function(){return!0},implementation:"JSON"}],matchMedia:[{isAvailable:function(){return"undefined"!=typeof matchMedia},module:function(){return matchMedia}},{isAvailable:function(){return!0},implementation:"matchMedia"}],getComputedStyle:[{isAvailable:function(){return"undefined"!=typeof getComputedStyle},module:function(){return getComputedStyle}},{isAvailable:function(){return!0},implementation:"getComputedStyle"}]});
+//# sourceMappingURL=dynamic.js.map

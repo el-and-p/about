@@ -1,0 +1,62 @@
+/*
+## Buttons
+
+```
+<a href="#" class="btn">Book Now</a>
+<a href="#" class="btn" disabled>Disabled</a>
+<a href="#" class="btn btn--dark">Book Now</a>
+<a href="#" class="btn btn--alpha">Book Now</a>
+```
+
+*/
+.btn {
+	@extend %text--heavy;
+	@extend %transition--all;
+	font-style: italic;
+	line-height: 2.5;
+	text-transform: uppercase;
+	&:hover {
+		background-color: $button--hover-background;
+		color: $button--hover-color;
+	}
+	&,
+	&:visited,
+	&:active {
+		color: $button-color;
+	}
+}
+.btn[disabled] {
+	&,
+	&:hover {
+		color: $button--inactive-color;
+		background-color: $button--inactive-background;
+	}
+}
+.btn--alpha {
+	@include lg_font-type('mega', false);
+	line-height: 2;
+}
+.btn--bare {
+	background: none;
+	border: none;
+}
+
+.btn--dark {
+	background: $button--dark-background;
+	color: $button--dark-color;
+	&:hover {
+		background: $button--hover-dark-background;
+		color: $button--hover-dark-color;
+	}
+}
+
+.btn-cta--call {
+	padding: lg_em(13px) lg_em(9px);
+	span {
+		display: block;
+		line-height: 1.1;
+	}
+}
+.btn--round {
+	@include lg_circle(1.5em);
+}
