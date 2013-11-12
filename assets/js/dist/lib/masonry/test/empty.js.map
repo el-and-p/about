@@ -1,0 +1,1 @@
+{"version":3,"file":"empty.js","sources":["empty.js.src.js"],"names":["test","container","document","querySelector","msnry","Masonry","ok","equal","columnWidth","getSize","innerWidth"],"mappings":"AAAAA,KAAM,QAAS,WAEb,GAAIC,GAAYC,SAASC,cAAc,UACnCC,EAAQ,GAAIC,SAASJ,EAEzBK,KAAI,EAAM,qCACVC,MAAOH,EAAMI,YAAaC,QAASR,GAAYS,WAAY"}

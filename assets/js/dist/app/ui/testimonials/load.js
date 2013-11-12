@@ -1,0 +1,2 @@
+define(["jquery","util/mediaqueries"],function(t,e){var i,n;return{init:function(){i=this,n=t(".js-masonry"),n.length&&this._initMediaQueries()},_initMediaQueries:function(){e.register([{queries:"screen and (min-width: 660px)",match:function(){void 0===n.data("masonry")&&require(["app/ui/testimonials/testimonials"],function(t){t.init()})}}])}}});
+//# sourceMappingURL=load.js.map

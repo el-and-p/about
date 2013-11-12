@@ -1,0 +1,2 @@
+!function(t,e){function n(t){t.preventDefault(),e.print()}t.fn.printernator=function(e){var i={delegate:""};return this.options=t.extend({},i,e),this.options.delegate.length?t(this.options.delegate).on("click",this,n):this.on("click",n)}}(jQuery,window,document);
+//# sourceMappingURL=jquery.printernator.js.map
