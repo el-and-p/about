@@ -1,8 +1,0 @@
-.figure--round {
-	@include lg_circle(lg_em(80px));
-	display: block;
-	overflow: hidden;
-}
-.figure--large {
-	@include lg_circle(lg_em(200px));
-}

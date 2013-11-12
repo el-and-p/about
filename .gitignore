@@ -185,3 +185,6 @@ build/node_modules/
 Session.vim
 .netrwhist
 *~
+
+# Project Specific
+www/assets/scss/
