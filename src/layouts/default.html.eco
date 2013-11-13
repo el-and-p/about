@@ -9,10 +9,10 @@
 	<meta name="description" content="<%=  @document.description or @site.description %>">
 	<%- @getBlock("meta").toHTML() %>
 	<!--[if (gt IE 8) | (IEMobile)]><!-->
-		<link rel="stylesheet" href="/assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
 	<!--<![endif]-->
 	<!--[if (lt IE 9) & (!IEMobile)]>
-		<link rel="stylesheet" href="/assets/css/style-fixed.css" />
+		<link rel="stylesheet" href="assets/css/style-fixed.css" />
 	<![endif]-->
 	<script type="text/javascript">
 	(function() {
