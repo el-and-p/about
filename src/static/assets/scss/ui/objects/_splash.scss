@@ -71,29 +71,29 @@
 @include breakpoint($medium-start, $no-query: true){
 
 	.splash--homepage {
-		background-image: url('/assets/images/interface/splash/homepage.jpg');
+		background-image: url('assets/images/interface/splash/homepage.jpg');
 	}
 	.splash--about {
-		background-image: url('/assets/images/interface/splash/city.jpg');
+		background-image: url('assets/images/interface/splash/city.jpg');
 	}
 	.splash--steve {
-		background-image: url('/assets/images/interface/splash/city.jpg');
+		background-image: url('assets/images/interface/splash/city.jpg');
 	}
 	.splash--reviews {
-		background-image: url('/assets/images/interface/splash/city.jpg');
+		background-image: url('assets/images/interface/splash/city.jpg');
 	}
 	.splash--trips-and-services {
 		&:before {
-			background-image: url('/assets/images/interface/splash/cloud.jpg');
+			background-image: url('assets/images/interface/splash/cloud.jpg');
 		}
 		&:after {
-			background-image: url('/assets/images/interface/splash/boat.jpg');
+			background-image: url('assets/images/interface/splash/boat.jpg');
 		}
 	}
 	.splash--sunset {
 		padding-bottom: percentage(250/1600);
 		&:after {
-			background-image: url('/assets/images/interface/splash/rangitoto.jpg');
+			background-image: url('assets/images/interface/splash/rangitoto.jpg');
 		}
 	}
 
@@ -101,7 +101,7 @@
 		padding-bottom: percentage(368/1600);
 		&:after {
 			padding-bottom: percentage(368/1600);
-			background-image: url('/assets/images/interface/splash/island.jpg');
+			background-image: url('assets/images/interface/splash/island.jpg');
 		}
 	}
 
