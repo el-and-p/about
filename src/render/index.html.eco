@@ -16,8 +16,8 @@ layout: default
 				<p class="text--heading text--strong text--dark text--center">Design</p>
 				<p class="text--dark text--center">Lydia is an Auckland-based UX/UI designer. She likes pretty things which probably explains why she hates Comic Sans so much.</p>
 				<ul class="nav nav--block contact__icons text--center">
-					<li><a href="" target="_blank" class="iconf__container iconf__container--bright iconf__container--hot">
-				<span aria-hidden="true" class="iconf-house iconf--small"></span><span class="visuallyhidden">Lydia Bae's website</span> </a></li>
+					<!--<li><a href="" target="_blank" class="iconf__container iconf__container--bright iconf__container--hot">
+				<span aria-hidden="true" class="iconf-house iconf--small"></span><span class="visuallyhidden">Lydia Bae's website</span> </a></li>-->
 					<li><a href="http://nz.linkedin.com/pub/lydia-bae/20/97/275" target="_blank" class="iconf__container iconf__container--bright iconf__container--hot">
 				<span aria-hidden="true" class="iconf-linkedin iconf--small"></span><span class="visuallyhidden">Lydia Bae on LinkedIn</span> </a></li>
 					<li><a href="https://twitter.com/lydia_bae" target="_blank" class="iconf__container iconf__container--bright iconf__container--hot">
@@ -30,9 +30,9 @@ layout: default
 				</div>
 				<h2 class="text--dark text--center">Pat O'Callaghan</h2>
 				<p class="text--heading text--strong text--dark text--center">Development</p>
-				<p class="text--dark text--center">Pat is a passionate developer who likes long walks into the sunset, lettuce and giving Lydia shit.</p>
+				<p class="text--dark text--center">Pat is a UI developer from the green fields of Ireland. He enjoys surfing, long walks into the sunset and not developing for IE8.</p>
 				<ul class="nav nav--block contact__icons text--center">
-					<li><a href="http://www.littleglitch.io" target="_blank" class="iconf__container iconf__container--bright iconf__container--hot">
+					<li><a href="http://littleglitch.io" target="_blank" class="iconf__container iconf__container--bright iconf__container--hot">
 				<span aria-hidden="true" class="iconf-house iconf--small"></span><span class="visuallyhidden">Pat O'Callaghan's website</span> </a></li>
 					<li><a href="https://www.github.com/patocallaghan" target="_blank" class="iconf__container iconf__container--bright iconf__container--hot">
 				<span aria-hidden="true" class="iconf-github iconf--small"></span><span class="visuallyhidden">Pat O'Callaghan on Github</span> </a></li>
