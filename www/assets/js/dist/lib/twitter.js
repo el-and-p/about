@@ -1,2 +1,0 @@
-!function(t,e,n){var i,r=t.getElementsByTagName(e)[0];t.getElementById(n)||(i=t.createElement(e),i.id=n,i.src="http://platform.twitter.com/widgets.js",r.parentNode.insertBefore(i,r))}(document,"script","twitter-wjs");var options={url:"/assets/css/ui/objects/plugins/twitter-iframe.css"};CustomizeTwitterWidget(options);
-//# sourceMappingURL=twitter.js.map

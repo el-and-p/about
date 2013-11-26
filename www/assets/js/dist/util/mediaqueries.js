@@ -1,2 +1,0 @@
-define(["jquery","enquire"],function(e){var t;return{queries:{"nav-small":"screen and (max-width: 639px)","nav-large":"screen and (min-width: 640px)"},init:function(){t=!e(".oldie").length},register:function(e){if("[object Array]"===Object.prototype.toString.call(e))for(var t=0;t<e.length;t++){var n=e[t];this._addToHandler(n)}else this._addToHandler(e)},_addToHandler:function(e){enquire.register(e.queries,{match:e.match,unmatch:e.unmatch,deferSetup:!0},e.shouldDegrade)}}});
-//# sourceMappingURL=mediaqueries.js.map

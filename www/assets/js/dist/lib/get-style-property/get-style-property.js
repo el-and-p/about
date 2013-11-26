@@ -1,2 +1,0 @@
-!function(t){function e(t){if(t){if("string"==typeof i[t])return t;t=t.charAt(0).toUpperCase()+t.slice(1);for(var e,r=0,o=n.length;o>r;r++)if(e=n[r]+t,"string"==typeof i[e])return e}}var n="Webkit Moz ms Ms O".split(" "),i=document.documentElement.style;"function"==typeof define&&define.amd?define([],function(){return e}):t.getStyleProperty=e}(window);
-//# sourceMappingURL=get-style-property.js.map

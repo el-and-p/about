@@ -1,2 +1,0 @@
-define([],function(){function t(t){for(var i,r={};i=n.exec(t);)r[i[1]]=e(i[2]||i[3]);return r}function e(t){return i.test(t)?t=t.replace(i,"$1").split(","):"null"===t?t=null:"false"===t?t=!1:"true"===t?t=!0:""===t||"''"===t||'""'===t?t="":isNaN(t)||(t=+t),t}var n=/([\w-]+)\s*:\s*(?:(\[[^\]]+\])|([^,]+)),?/g,i=/^\[([^\]]+)\]$/;return{parseProperties:t,typecastVal:e}});
-//# sourceMappingURL=propertyParser.js.map

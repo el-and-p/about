@@ -1,2 +1,0 @@
-define([],function(){function t(t){var e,n;e=document.createElement("script"),e.type="text/javascript",e.async=!0,e.src=t,n=document.getElementsByTagName("script")[0],n.parentNode.insertBefore(e,n)}function e(t,e){var n=/!(.+)/,r=t.replace(n,""),o=n.test(t)?t.replace(/.+!/,""):i;return r+=r.indexOf("?")<0?"?":"&",r+o+"="+e}function n(){return r+=1,"__async_req_"+r+"__"}var i="callback",r=0;return{load:function(i,r,o,s){if(s.isBuild)o(null);else{var a=n();window[a]=o,t(e(i,a))}}}});
-//# sourceMappingURL=async.js.map

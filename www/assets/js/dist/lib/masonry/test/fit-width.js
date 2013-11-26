@@ -1,2 +1,0 @@
-test("fit width",function(){var t=document.querySelector("#fit-width .container"),e=new Masonry(t,{columnWidth:60,isFitWidth:!0});equal(e.cols,2,"2 columns"),equal(e.cols*e.columnWidth+"px",t.style.width,"width set to match")});
-//# sourceMappingURL=fit-width.js.map

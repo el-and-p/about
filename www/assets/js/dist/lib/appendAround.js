@@ -1,2 +1,0 @@
-!function(t){t.fn.appendAround=function(e){return this.each(function(){function i(t){return"none"===window.getComputedStyle(t,null).getPropertyValue("display")}function n(){if(i(d)){var t=0;l.each(function(){i(this)||t||(s.appendTo(this),t++,d=this,r.complete&&r.complete.call(d))})}}var o={},r=t.extend({},o,e),s=t(this),a="data-set",u=s.parent(),d=u[0],c=u.attr(a),l=t("["+a+"='"+c+"']");n(),t(window).bind("resize",n)})}}(jQuery);
-//# sourceMappingURL=appendAround.js.map

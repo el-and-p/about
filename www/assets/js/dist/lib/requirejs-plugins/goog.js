@@ -1,2 +1,0 @@
-define(["async","propertyParser"],function(t,e){function n(t){var n=i.exec(t),r={moduleName:n[1],version:n[2]||"1"};return r.settings=e.parseProperties(n[3]),r}var i=/^([^,]+)(?:,([^,]+))?(?:,(.+))?/;return{load:function(t,e,i,r){if(r.isBuild)i(null);else{var o=n(t),s=o.settings;s.callback=i,e(["async!"+("https:"===document.location.protocol?"https":"http")+"://www.google.com/jsapi"],function(){google.load(o.moduleName,o.version,s)})}}}});
-//# sourceMappingURL=goog.js.map

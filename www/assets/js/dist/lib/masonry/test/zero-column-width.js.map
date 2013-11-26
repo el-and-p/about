@@ -1,1 +1,0 @@
-{"version":3,"file":"zero-column-width.js","sources":["zero-column-width.js.src.js"],"names":["test","container","document","querySelector","msnry","Masonry","equal","columnWidth"],"mappings":"CAAA,WAIAA,KAAM,oBAAqB,WACzB,GAAIC,GAAYC,SAASC,cAAc,sBACnCC,EAAQ,GAAIC,SAASJ,EACzBK,OAAOF,EAAMG,YAAa,IAAK"}

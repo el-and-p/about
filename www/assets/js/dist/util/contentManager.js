@@ -1,2 +1,0 @@
-define(["jquery"],function(e){var t={};return{getContent:function(n){var i=e.Deferred();return t[n]?i.resolveWith(this,[t[n]]):e.ajax({url:n}).done(function(e){i.resolveWith(this,[e]),t[n]=e}),i.promise()}}});
-//# sourceMappingURL=contentManager.js.map

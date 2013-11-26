@@ -1,2 +1,0 @@
-define(["jquery"],function(t){var i;return{init:function(){i=this,this._initSubscriptions(),t(".js-listing").length||this._setUp()},_initSubscriptions:function(){t.subscribe("/detail/init",this._setUp)},_setUp:function(){i._initEqualisation(),i._initTabs()},_initEqualisation:function(){require(["app/ui/equalisation/equalisation"],function(t){t.init()})},_initTabs:function(){t(".js-tabbery").length&&require(["app/ui/tabs/load"],function(t){t.init()})}}});
-//# sourceMappingURL=detail.js.map

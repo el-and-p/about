@@ -1,1 +1,0 @@
-{"version":3,"file":"require-js.js","sources":["require-js.js.src.js"],"names":["requirejs","config","baseUrl","docReady","document","body","innerHTML"],"mappings":"AAEAA,UAAUC,QACRC,QAAS,wBAOXF,WAAa,gBAAkB,SAAUG,GAEvCA,EAAU,WACRC,SAASC,KAAKC,WAAa"}

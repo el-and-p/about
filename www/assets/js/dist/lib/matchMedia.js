@@ -1,2 +1,0 @@
-window.matchMedia=window.matchMedia||function(t){var e,n=t.documentElement,i=n.firstElementChild||n.firstChild,r=t.createElement("body"),o=t.createElement("div");return o.id="mq-test-1",o.style.cssText="position:absolute;top:-100em",r.style.background="none",r.appendChild(o),function(t){return o.innerHTML='&shy;<style media="'+t+'"> #mq-test-1 { width: 42px; }</style>',n.insertBefore(r,i),e=42===o.offsetWidth,n.removeChild(r),{matches:e,media:t}}}(document);
-//# sourceMappingURL=matchMedia.js.map

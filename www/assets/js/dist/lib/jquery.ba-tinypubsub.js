@@ -1,2 +1,0 @@
-!function(e){var t=e("<b/>");e.subscribe=function(n,i){function r(){return i.apply(this,Array.prototype.slice.call(arguments,1))}r.guid=i.guid=i.guid||(e.guid?e.guid++:e.event.guid++),t.bind(n,r)},e.unsubscribe=function(){t.unbind.apply(t,arguments)},e.publish=function(){t.trigger.apply(t,arguments)}}(jQuery);
-//# sourceMappingURL=jquery.ba-tinypubsub.js.map
